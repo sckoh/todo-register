@@ -1,0 +1,27 @@
+<ion-view view-title="Register">
+    <ion-content>
+        <form name="registerForm" novalidate ng-submit="registerForm.$valid && rc.register(rc.user)">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input name="username" type="text" ng-model="rc.user.username" required>
+                </label>
+                <div class="form-errors" ng-show="registerForm.username.$invalid && registerForm.$submitted" ng-messages="registerForm.username.$error">
+                    <div ng-message="required">this username is required</div>
+                    <div ng-messages-include="templates/form-error.html"></div>
+                </div>
+                <!-- two way binding -->
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input name="password" type="password" ng-model="rc.user.password" required>
+                </label>
+                <div class="form-errors" ng-show="registerForm.password.$invalid && registerForm.$submitted" ng-messages="registerForm.password.$error">
+                    <div ng-messages-include="templates/form-error.html"></div>
+                </div>
+            </div>
+            <button type="submit" class="button button-block button-positive">
+                Register
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

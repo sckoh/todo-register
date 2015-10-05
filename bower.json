@@ -1,0 +1,10 @@
+{
+  "name": "todo-register",
+  "version": "0.0.1",
+  "main": [
+    "module/js/controller/register-controller.js",
+    "module/js/service/register-service.js",
+    "module/js/module-register.js"
+  ],
+  "ignore": []
+}
